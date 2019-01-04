@@ -39,7 +39,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:0.55.3'
+    compile 'com.facebook.react:react-native:+'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
 }
   
