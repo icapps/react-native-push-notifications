@@ -17,15 +17,24 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: "kotlin-android-extensions"
 
+def DEFAULT_COMPILE_SDK_VERSION = 28
+def DEFAULT_BUILD_TOOLS_VERSION = "28.0.3"
+def DEFAULT_TARGET_SDK_VERSION = 27
+def DEFAULT_SUPPORT_LIB_VERSION = "27.1.1"
+def DEFAULT_FIREBASE_MESSAGING_VERSION = "+"
+
 android {
-    compileSdkVersion 27
-    buildToolsVersion "28.0.0"
+    compileSdkVersion project.hasProperty('compileSdkVersion') ? project.compileSdkVersion : DEFAULT_COMPILE_SDK_VERSION
+    buildToolsVersion project.hasProperty('buildToolsVersion') ? project.buildToolsVersion : DEFAULT_BUILD_TOOLS_VERSION
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion project.hasProperty('targetSdkVersion') ? project.targetSdkVersion : DEFAULT_TARGET_SDK_VERSION
         versionCode 1
         versionName "1.0"
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
     }
     lintOptions {
         abortOnError false
@@ -39,7 +48,17 @@ repositories {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    def supportLibVersion = project.hasProperty('supportLibVersion') ? project.supportLibVersion : DEFAULT_SUPPORT_LIB_VERSION
+    def firebaseVersion = project.hasProperty('firebaseVersion') ? project.firebaseVersion : DEFAULT_FIREBASE_MESSAGING_VERSION
+
+    //Android Libs
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+
+    //Firebase
+    implementation "com.google.firebase:firebase-messaging:$firebaseVersion"
+
+    //react native libs
+    implementation 'com.facebook.react:react-native:+'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
 }
   
