@@ -1,7 +1,6 @@
 # Android GIT IGNORE
 
 # Android/IntelliJ
-#
 build/
 .idea
 .gradle
@@ -12,6 +11,11 @@ local.properties
 buck-out/
 \.buckd/
 *.keystore
+
+# Gradle Wrapper
+android/gradle/*
+android/gradlew
+android/gradlew.bat
 
 
 # React Native GIT IGNORE
