@@ -28,7 +28,7 @@
   },
   "rnpm": {
     "android": {
-      "packageInstance": "new ReactNativePushNotificationsPackage()"
+      "packageInstance": "new RnPushNotificationsPackage()"
     }
   },
   "author": "icapps <https://icapps.com>",
