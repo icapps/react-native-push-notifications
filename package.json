@@ -9,9 +9,14 @@
   "keywords": [
     "react-native"
   ],
-  "author": "",
-  "license": "",
+  "rnpm": {
+    "android": {
+      "packageInstance": "new ReactNativePushNotificationPackage()"
+    }
+  },
+  "author": "icapps",
+  "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.41.2"
+    "react-native": ">=0.54"
   }
 }
