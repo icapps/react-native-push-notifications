@@ -1,0 +1,36 @@
+{
+  "name": "react-native-push-notifications",
+  "version": "0.0.1",
+  "description": "Firebase android push notification support for react native.",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "notifications",
+    "push",
+    "apns",
+    "firebase"
+  ],
+  "bugs": {
+    "url": "https://github.com/icapps/react-native-push-notifications/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:icapps/react-native-push-notifications.git"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.54"
+  },
+  "rnpm": {
+    "android": {
+      "packageInstance": "new ReactNativePushNotificationsPackage()"
+    }
+  },
+  "author": "icapps <https://icapps.com>",
+  "license": "MIT"
+}
