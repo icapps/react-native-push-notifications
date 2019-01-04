@@ -12,6 +12,7 @@ import java.util.Collections
  * @author Koen Van Looveren
  */
 class RNPushNotificationsPackage : ReactPackage {
+
     override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
         val list = ArrayList<NativeModule>()
         list.add(RNPushNotificationsModule(reactContext))
