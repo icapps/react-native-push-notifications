@@ -1,0 +1,34 @@
+# Android GIT IGNORE
+
+# Built application files
+android/*.apk
+android/*.ap_
+android/*.aab
+
+# Files for the ART/Dalvik VM
+android/*.dex
+
+# Java class files
+android/*.class
+
+# Generated files
+android/bin/
+android/gen/
+android/out/
+
+# Gradle files
+android/.gradle/
+android/build/
+
+# Local configuration file (sdk path, etc)
+android/local.properties
+
+# Log Files
+android/*.log
+
+# IntelliJ
+android/*.iml
+android/.idea/*
+
+
+# React Native GIT IGNORE
