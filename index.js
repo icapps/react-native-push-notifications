@@ -1,6 +1,3 @@
+import lib from './lib';
 
-import { NativeModules } from 'react-native';
-
-const { RNPushNotifications } = NativeModules;
-
-export default RNPushNotifications;
+export default lib;
