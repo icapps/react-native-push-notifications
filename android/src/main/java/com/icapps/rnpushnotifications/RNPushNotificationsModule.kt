@@ -59,6 +59,16 @@ class RNPushNotificationsModule internal constructor(reactContext: ReactApplicat
         }
     }
 
+    @ReactMethod
+    fun cancelNotification(id: Int) {
+        NotificationUtil.cancelNotification(reactApplicationContext, id)
+    }
+
+    @ReactMethod
+    fun cancelAllNotifications() {
+        NotificationUtil.cancelAllNotifications(reactApplicationContext)
+    }
+
     override fun getName(): String {
         return NAME
     }
